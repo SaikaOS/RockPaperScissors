@@ -16,8 +16,8 @@ header {
   height: 20vh; }
   header .player {
     display: flex;
-    justify-content: space-around;
     align-items: center;
+    justify-content: space-around;
     flex-direction: column;
     width: 80vw;
     font-size: 1.5em;
@@ -26,7 +26,7 @@ header {
 article {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
   flex-direction: column; }
   article .info {
     font-size: 3em;
@@ -38,23 +38,23 @@ article {
     article .btns button {
       background-color: #246558;
       color: white;
-      padding: 10px 50px;
-      font-size: 1.3em;
       cursor: pointer;
       border: 0;
-      border-radius: 3px; }
+      border-radius: 3px;
+      padding: 10px 50px;
+      font-size: 1.3em; }
 
 footer input {
+  background-color: #246558;
+  color: white;
+  cursor: pointer;
+  border: 0;
+  border-radius: 3px;
   position: absolute;
   bottom: 20px;
   right: 20px;
-  background-color: #246558;
-  color: white;
   padding: 10px;
-  font-size: 0.8em;
-  cursor: pointer;
-  border: 0;
-  border-radius: 3px; }
+  font-size: 0.8em; }
 
 footer:hover {
   opacity: 0.7; }

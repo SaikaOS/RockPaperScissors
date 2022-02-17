@@ -1,3 +1,18 @@
+@mixin flexi {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+@mixin stylish {
+    background-color: rgb(36,101,88);
+    color: white;
+    cursor: pointer;
+    border: 0;
+    border-radius: 3px;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -12,16 +27,13 @@ body {
 }
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 20vh;
 
 .player {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+    @include flexi();
     width: 80vw;
     font-size: 1.5em;
     text-align: center;
@@ -29,10 +41,7 @@ header {
 }
 
 article {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
+  @include flexi();
 
 .info {
     font-size: 3em;
@@ -45,29 +54,21 @@ article {
     width: 50vw;
 
 button {
-    background-color: rgb(36,101,88);
-    color: white;
+    @include stylish();
     padding: 10px 50px;
     font-size: 1.3em;
-    cursor: pointer;
-    border: 0;
-    border-radius: 3px;
 }
 }
 }
 
 footer {
   input {
+    @include stylish();
     position: absolute;
     bottom: 20px;
     right: 20px;
-    background-color: rgb(36,101,88);
-    color: white;
     padding: 10px;
     font-size: 0.8em;
-    cursor: pointer;
-    border: 0;
-    border-radius: 3px;
   }
   &:hover {
     opacity: 0.7;
